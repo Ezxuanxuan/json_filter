@@ -3,9 +3,11 @@
 
 ```go
 package main
-import json-filter
+import  (
+	json-filter
+	)
 
-func TestFilter() {
+func main() {
 	var env interface{}
 	err := json.Unmarshal([]byte(`{"email":"rsj217@gmail.com","money":100.5,"a":{"b":"bbbb","c":{"d":"ddddd"}},"e":"eeee"}`), &env)
 	re, err := Filter(env, "a.c.h,email")
@@ -18,4 +20,3 @@ func TestFilter() {
 	fmt.Println(string(result))
 }
 ```
-
